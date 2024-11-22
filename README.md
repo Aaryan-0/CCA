@@ -39,60 +39,63 @@ Clone the repository to your local system:
 git clone https://github.com/Aaryan-0/secure-private-cloud.git
 cd secure-private-cloud/scripts
 
-**### Step 2: Prepare the Virtual Machine**
-Install Oracle VirtualBox:
-Download and install VirtualBox from here.
+### Step 2: Prepare the Virtual Machine
+Install Oracle VirtualBox
 
-Create a VM:
+Download and install VirtualBox from here.
+Create a Virtual Machine
 
 OS Type: Linux > Ubuntu (64-bit).
-Allocate RAM and storage as per requirements.
-Attach the Ubuntu Server ISO image to the VM.
-Install Ubuntu Server:
-Follow the Ubuntu Server 22.04 installation process. Ensure SSH is enabled during setup.
+Resources: Allocate RAM and storage as per your requirements.
+Attach Ubuntu ISO: Attach the Ubuntu Server ISO image to the VM.
+Install Ubuntu Server
 
-**###  Step 3: Install Required Software**
+Follow the Ubuntu Server 22.04 installation process.
+Ensure SSH is enabled during the setup.
+Step 3: Install Required Software
 Run the installation script provided in the repository:
 
 bash
 Copy code
 chmod +x install.sh
 sudo ./install.sh
-The script performs:
+The script performs the following:
 
-System updates.
-Installation of Nextcloud and its dependencies.
-WireGuard VPN configuration.
-SSL certificate setup using Let's Encrypt.
-
-**### Step 4: Configure WireGuard VPN**
-Edit Configuration:
+Updates the system.
+Installs Nextcloud and its dependencies.
+Configures WireGuard VPN.
+Sets up SSL certificates using Let's Encrypt.
+Step 4: Configure WireGuard VPN
+Edit Configuration
 Modify wg0.conf with your network settings:
 
 bash
 Copy code
 nano /etc/wireguard/wg0.conf
-Enable WireGuard:
+Enable WireGuard
 Start and enable the WireGuard service:
 
 bash
 Copy code
 sudo systemctl enable wg-quick@wg0
 sudo systemctl start wg-quick@wg0
-Add VPN Clients:
+Add VPN Clients
 Use the add-client.sh script to create VPN profiles:
 
 bash
 Copy code
 ./add-client.sh client-name
+Step 5: Configure Nextcloud
+Access Nextcloud
+Open your browser and visit:
 
-**### Step 5: Configure Nextcloud**
-Access Nextcloud:
-Open your browser and visit https://<server-ip>/nextcloud.
+browser
+Copy code
+https://<server-ip>/nextcloud
+Set Up Admin Account
+Follow the on-screen instructions to create the admin account and complete the initial configuration.
 
-Set Up Admin Account:
-Follow the on-screen instructions to set up the admin account and complete the initial configuration.
+Enable SSL
+SSL certificates are automatically managed by Let's Encrypt during the installation.
 
-Enable SSL:
-SSL certificates are automatically handled by Let's Encrypt during installation.
 
