@@ -57,7 +57,6 @@ Steps:
    - Resources: Allocate RAM and storage as per your requirements.
    - Attach the Ubuntu Server ISO image to the VM.
 - Install Ubuntu Server
-  Steps:
    - Boot the VM using the attached Ubuntu Server ISO.
    - Follow the Ubuntu Server 22.04 installation process.
    - During the setup, ensure SSH is enabled.
