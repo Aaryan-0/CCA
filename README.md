@@ -125,128 +125,112 @@ SSL certificates are automatically managed by Let's Encrypt during the installat
 ---
 
 
-# CCA
+\# CCA
 
-# Secure Private Cloud Server
+\# Secure Private Cloud Server
 
-A secure, cost-effective private cloud solution for small businesses using Oracle VirtualBox, Ubuntu Server, Nextcloud, and WireGuard VPN. This setup enables secure file storage, sharing, and remote access, tailored for small businesses to deploy either on-premises or in the cloud.
+A secure, cost-effective private cloud solution for small businesses
+using Oracle VirtualBox, Ubuntu Server, Nextcloud, and WireGuard VPN.
+This setup enables secure file storage, sharing, and remote access,
+tailored for small businesses to deploy either on-premises or in the
+cloud.
 
----
+\-\--
 
-## Features
+\## Features
 
-- **Nextcloud Integration**: A robust platform for secure file storage, sharing, and collaboration.
-- **WireGuard VPN**: Provides encrypted remote access to the private cloud server.
-- **Cost-Effective**: Ideal for small businesses with limited resources.
-- **Flexible Hosting**: Can be hosted on-premises or in a public/private cloud environment.
-- **SSL Encryption**: Secures all communications with Let's Encrypt certificates.
+\- \*\*Nextcloud Integration\*\*: A robust platform for secure file
+storage, sharing, and collaboration. - \*\*WireGuard VPN\*\*: Provides
+encrypted remote access to the private cloud server. -
+\*\*Cost-Effective\*\*: Ideal for small businesses with limited
+resources. - \*\*Flexible Hosting\*\*: Can be hosted on-premises or in a
+public/private cloud environment. - \*\*SSL Encryption\*\*: Secures all
+communications with Let\'s Encrypt certificates.
 
----
+\-\--
 
-## Requirements
+\## Requirements
 
-- **Software:**
-  - Oracle VirtualBox
-  - Ubuntu Server 22.04 LTS
-  - Nextcloud (latest stable release)
-  - WireGuard VPN
-- **Hardware:**
-  - Minimum: 2 GB RAM, 100 GB storage.
-  - Recommended: 4 GB RAM, 100 GB storage (or more, based on usage).
-- **Networking:**
-  - Public or private static IP for the VPN server.
+\- \*\*Software:\*\*  - Oracle VirtualBox  - Ubuntu Server 22.04 LTS  -
+Nextcloud (latest stable release)  - WireGuard VPN - \*\*Hardware:\*\*
+ - Minimum: 2 GB RAM, 100 GB storage.  - Recommended: 4 GB RAM, 100 GB
+storage (or more, based on usage). - \*\*Networking:\*\*  - Public or
+private static IP for the VPN server.
 
----
+\-\--
 
-## Setup Instructions
+\## Setup Instructions
 
-### Step 1: Clone the Repository
-Clone the repository to your local system:
-```bash
-git clone https://github.com/Aaryan-0/secure-private-cloud.git
-cd secure-private-cloud/scripts
+\### Step 1: Clone the Repository Clone the repository to your local
+system:\*\*
+\`\`\`bash git clone
+https://github.com/Aaryan-0/secure-private-cloud.git cd
+secure-private-cloud/scripts \`\`\`
 
----
+\-\--
 
-Step 2: Prepare the Virtual Machine
-Install Oracle VirtualBox
-Steps:
+\### \*\*Step 2: Prepare the Virtual Machine\*\*
+ 
+\### \*\*Install Oracle VirtualBox Steps:\*\*
 
 Download Oracle VirtualBox from here.
-Install it on your system.
-Create a Virtual Machine
-Steps:
+Install it on your system. 
 
-Open VirtualBox.
-Create a new virtual machine with the following settings:
-OS Type: Linux > Ubuntu (64-bit).
-Resources: Allocate RAM and storage as per your requirements.
-Attach the Ubuntu Server ISO image to the VM.
-Install Ubuntu Server
-Steps:
+Create a Virtual Machine Steps:
 
-Boot the VM using the attached Ubuntu Server ISO.
-Follow the Ubuntu Server 22.04 installation process.
-During the setup, ensure SSH is enabled.
+Open VirtualBox. Create a new virtual machine with the following
+settings: OS Type: Linux \> Ubuntu (64-bit). Resources: Allocate RAM and
+storage as per your requirements. Attach the Ubuntu Server ISO image to
+the VM. Install Ubuntu Server Steps:
 
-Step 3: Install Required Software
-Steps:
+Boot the VM using the attached Ubuntu Server ISO. Follow the Ubuntu
+Server 22.04 installation process. During the setup, ensure SSH is
+enabled.
 
-Make the installation script executable.
-Run the script to install and configure required software.
+\-\--
 
-```bash  
-chmod +x install.sh  
-sudo ./install.sh  
-```  
+\### \*\*Step 3: Install Required Software Steps:\*\*
 
-The script performs the following:  
-- Updates the system.  
-- Installs Nextcloud and its dependencies.  
-- Configures WireGuard VPN.  
-- Sets up SSL certificates using Let's Encrypt.  
+Make the installation script executable. Run the script to install and
+configure required software.
 
----
+\`\`\`bash chmod +x install.sh sudo ./install.sh \`\`\`
 
-### **Step 4: Configure WireGuard VPN**  
+The script performs the following:  - Updates the system.  - Installs
+Nextcloud and its dependencies.  - Configures WireGuard VPN.  - Sets up
+SSL certificates using Let\'s Encrypt.
 
-#### **Edit Configuration**  
-Modify `wg0.conf` with your network settings:  
+\-\--
 
-```bash  
-nano /etc/wireguard/wg0.conf  
-```  
+\### \*\*Step 4: Configure WireGuard VPN\*\*
 
-#### **Enable WireGuard**  
-Start and enable the WireGuard service:  
+\#### \*\*Edit Configuration\*\* Modify \`wg0.conf\` with your network
+settings:
 
-```bash  
-sudo systemctl enable wg-quick@wg0  
-sudo systemctl start wg-quick@wg0  
-```  
+\`\`\`bash nano /etc/wireguard/wg0.conf \`\`\`
 
-#### **Add VPN Clients**  
-Use the `add-client.sh` script to create VPN profiles:  
+\#### \*\*Enable WireGuard\*\* Start and enable the WireGuard service:
 
-```bash  
-./add-client.sh client-name  
-```  
+\`\`\`bash sudo systemctl enable wg-quick@wg0 sudo systemctl start
+wg-quick@wg0 \`\`\`
 
----
+\#### \*\*Add VPN Clients\*\* Use the \`add-client.sh\` script to create
+VPN profiles:
 
-### **Step 5: Configure Nextcloud**  
+\`\`\`bash ./add-client.sh client-name \`\`\`
 
-#### **Access Nextcloud**  
-Open your browser and visit:  
+\-\--
 
-```text  
-https://<server-ip>/nextcloud  
-```  
+\### \*\*Step 5: Configure Nextcloud\*\*
 
-#### **Set Up Admin Account**  
-Follow the on-screen instructions to create the admin account and complete the initial configuration.  
+\#### \*\*Access Nextcloud\*\* Open your browser and visit:
 
-#### **Enable SSL**  
-SSL certificates are automatically managed by Let's Encrypt during the installation.  
+\`\`\`text https://\<server-ip\>/nextcloud \`\`\`
 
----
+\#### \*\*Set Up Admin Account\*\* Follow the on-screen instructions to
+create the admin account and complete the initial configuration.
+
+\#### \*\*Enable SSL\*\* SSL certificates are automatically managed by
+Let\'s Encrypt during the installation.
+
+\-\--
