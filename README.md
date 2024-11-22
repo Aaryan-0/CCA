@@ -51,16 +51,16 @@ Install it on your system.
 Create a Virtual Machine
 
 Steps:
--Open VirtualBox.
--Create a new virtual machine with the following settings:
-   -OS Type: Linux > Ubuntu (64-bit).
-   -Resources: Allocate RAM and storage as per your requirements.
-   -Attach the Ubuntu Server ISO image to the VM.
+- Open VirtualBox.
+- Create a new virtual machine with the following settings:
+   - OS Type: Linux > Ubuntu (64-bit).
+   - Resources: Allocate RAM and storage as per your requirements.
+   - Attach the Ubuntu Server ISO image to the VM.
 -Install Ubuntu Server
 # Steps:
-   -Boot the VM using the attached Ubuntu Server ISO.
-   -Follow the Ubuntu Server 22.04 installation process.
-   -During the setup, ensure SSH is enabled.
+   - Boot the VM using the attached Ubuntu Server ISO.
+   - Follow the Ubuntu Server 22.04 installation process.
+   - During the setup, ensure SSH is enabled.
 
 ---
 
