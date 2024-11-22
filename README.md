@@ -37,7 +37,8 @@ A secure, cost-effective private cloud solution for small businesses using Oracl
 Clone the repository to your local system:
 ```bash
 git clone https://github.com/Aaryan-0/secure-private-cloud.git
-cd secure-private-cloud/scripts ```
+cd secure-private-cloud/scripts
+```
 
 ---
 
@@ -64,7 +65,7 @@ During the setup, ensure SSH is enabled.
 
 ---
 
-Step 3: Install Required Software
+### Step 3: Install Required Software
 Steps:
 
 Make the installation script executable.
