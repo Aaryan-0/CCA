@@ -36,7 +36,7 @@ A secure, cost-effective private cloud solution for small businesses using Oracl
 ### Step 1: Clone the Repository
 Clone the repository to your local system:
 ```bash
-git clone https://github.com/Aaryan-0/secure-private-cloud.git
+git clone https://github.com/Aaryan-0/CCA.git
 cd secure-private-cloud/scripts
 ```
 
