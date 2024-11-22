@@ -37,11 +37,11 @@ A secure, cost-effective private cloud solution for small businesses using Oracl
 Clone the repository to your local system:
 ```bash
 git clone https://github.com/Aaryan-0/secure-private-cloud.git
-cd secure-private-cloud/scripts
+cd secure-private-cloud/scripts ```
 
 ---
 
-Step 2: Prepare the Virtual Machine
+### Step 2: Prepare the Virtual Machine
 Install Oracle VirtualBox
 Steps:
 
@@ -61,6 +61,8 @@ Steps:
 Boot the VM using the attached Ubuntu Server ISO.
 Follow the Ubuntu Server 22.04 installation process.
 During the setup, ensure SSH is enabled.
+
+---
 
 Step 3: Install Required Software
 Steps:
