@@ -41,26 +41,32 @@ cd secure-private-cloud/scripts
 
 ---
 
-### **Step 2: Prepare the Virtual Machine**  
+Step 2: Prepare the Virtual Machine
+Install Oracle VirtualBox
+Steps:
 
-#### **Install Oracle VirtualBox**  
+Download Oracle VirtualBox from here.
+Install it on your system.
+Create a Virtual Machine
+Steps:
 
-Download and install VirtualBox from [here](https://www.virtualbox.org/).  
+Open VirtualBox.
+Create a new virtual machine with the following settings:
+OS Type: Linux > Ubuntu (64-bit).
+Resources: Allocate RAM and storage as per your requirements.
+Attach the Ubuntu Server ISO image to the VM.
+Install Ubuntu Server
+Steps:
 
-#### **Create a Virtual Machine**  
-- **OS Type**: Linux > Ubuntu (64-bit).  
-- **Resources**: Allocate RAM and storage as per your requirements.  
-- **Attach Ubuntu ISO**: Attach the Ubuntu Server ISO image to the VM.  
+Boot the VM using the attached Ubuntu Server ISO.
+Follow the Ubuntu Server 22.04 installation process.
+During the setup, ensure SSH is enabled.
 
-#### **Install Ubuntu Server**  
-Follow the Ubuntu Server 22.04 installation process:  
-- Ensure SSH is enabled during the setup.  
+Step 3: Install Required Software
+Steps:
 
----
-
-### **Step 3: Install Required Software**  
-
-Run the installation script provided in the repository:  
+Make the installation script executable.
+Run the script to install and configure required software.
 
 ```bash  
 chmod +x install.sh  
